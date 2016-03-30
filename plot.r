@@ -35,3 +35,22 @@ png(file = "test.png", width = 480, height = 480)
 g+geom_bar(position="dodge")+
 facet_grid(method~.)
 dev.off()
+
+
+##compare with barplot
+##to plot a bar chart using barplot,normally, you need to covert your dataset to a matrix 
+nums<-c(137,74,122,62,59,48)
+rnames<-c("A","B")
+cnames<-c("befroe","test","after")
+data<-matrix(nums,nrow=2,ncol=3,byrow=TRUE,dimnames=list(rnames, cnames))
+data
+##  befroe test after
+##A    137   74   122
+##B     62   59    48
+
+png(file = "test2.png", width = 480, height = 480)
+barplot(data,beside = TRUE,col=c("lightblue", "mistyrose"),
+	legend = rownames(data),names.arg=colnames(data),ylim=c(0,160),
+	main="title of the plot")
+dev.off()
+
