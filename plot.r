@@ -38,7 +38,7 @@ dev.off()
 
 
 ##compare with barplot
-##to plot a bar chart using barplot,normally, you need to covert your dataset to a matrix 
+##to plot a bar chart using barplot,normally, you need to convert your dataset to a matrix 
 nums<-c(137,74,122,62,59,48)
 rnames<-c("A","B")
 cnames<-c("befroe","test","after")
